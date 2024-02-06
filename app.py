@@ -8,16 +8,16 @@ load_dotenv()
 import weaviate
 import os
 #os.environ["OPENAI_API_KEY"] = getpass.getpass("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")
-WEAVIATE_URL = "http://my-sandbox-cluster-fp8df6e0.weaviate.network"
+WEAVIATE_URL = WEAVIATE_URL
 #os.environ["WEAVIATE_API_KEY"] = getpass.getpass("WEAVIATE_API_KEY:")
-WEAVIATE_API_KEY = "xnIEYLWengRF9JL3kRGmT5X7L8fjG8IMgR0z"
+WEAVIATE_API_KEY = "WEAVIATE_API_KEY"
 
 # client = weaviate.Client(
 #     url=WEAVIATE_URL, auth_client_secret=weaviate.AuthApiKey(WEAVIATE_API_KEY)
 # )
 client = weaviate.connect_to_wcs(
-    cluster_url="http://my-sandbox-cluster-fp8df6e0.weaviate.network",  # Replace with your WCS URL
-    auth_credentials=weaviate.auth.AuthApiKey("xnIEYLWengRF9JL3kRGmT5X7L8fjG8IMgR0z")  # Replace with your WCS key
+    cluster_url="cluster_url",  # Replace with your WCS URL
+    auth_credentials=weaviate.auth.AuthApiKey("api_key")  # Replace with your WCS key
 )
 
 loader = TextLoader("state_of_the_union.txt")
