@@ -1,0 +1,5 @@
+ weaviate-client
+ langchain
+ openai
+ langchain_openai
+ python-dotenv
